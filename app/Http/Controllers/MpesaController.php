@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use App\Models\MpesaTransaction;
 
 class MpesaController extends Controller
 {
@@ -49,17 +50,26 @@ class MpesaController extends Controller
 
     public function stkPush()
     {
+        $user = $request->user;
+            $amount = $request->amount;
+            $phone =  $request->phone;
+            $formatedPhone = substr($phone, 1);//726582228
+            $code = "254";
+            $phoneNumber = $code.$formatedPhone;//254726582228
+
+
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl_post_data = [
             'BusinessShortCode' => 174379,
             'Password' => $this->lipaNaMpesaPassword(),
             'Timestamp' => Carbon::now()->format('YmdHis'),
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => '1',
-            'PartyA' => '254743297643',
+            'Amount' => $amount,
+            'PartyA' => $phoneNumber,
             'PartyB' => 174379,
-            'PhoneNumber' => '254743297643',
-            'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
+            'PhoneNumber' => $phoneNumber,
+            'CallBackURL' => 'https://9002-102-212-30-22.ngrok-free.app/api/stk/push/callback/url',
+            // 'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
             'AccountReference' => "SupaaDuka OnlineShopping",
             'TransactionDesc' => "lipa Na M-PESA"
         ];
@@ -75,6 +85,21 @@ class MpesaController extends Controller
         $curl_response = curl_exec($curl);
         curl_close($curl);
 
-        return $curl_response;
+        return redirect('/confirm'); 
     }
+
+    public function MpesaRes(Request $request)
+     {
+        error_log("Mpesa method was called");
+        $response = json_decode($request->getContent());
+
+        $trn = new MpesaTransaction;
+        $trn->response = json_encode($response);
+        $trn->save();
+     }
+
+     public function confirm()
+     {
+        return view('confirm');
+     }
 }
