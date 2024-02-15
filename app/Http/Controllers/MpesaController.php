@@ -68,8 +68,8 @@ class MpesaController extends Controller
             'PartyA' => $phoneNumber,
             'PartyB' => 174379,
             'PhoneNumber' => $phoneNumber,
-            'CallBackURL' => 'https://9002-102-212-30-22.ngrok-free.app/api/stk/push/callback/url',
-            // 'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
+            // 'CallBackURL' => 'https://9002-102-212-30-22.ngrok-free.app/api/stk/push/callback/url',
+            'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
             'AccountReference' => "SupaaDuka OnlineShopping",
             'TransactionDesc' => "lipa Na M-PESA"
         ];
