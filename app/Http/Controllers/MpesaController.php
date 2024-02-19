@@ -64,7 +64,7 @@ class MpesaController extends Controller
             'Password' => $this->lipaNaMpesaPassword(),
             'Timestamp' => Carbon::now()->format('YmdHis'),
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => '1',
+            'Amount' => $amount,
             'PartyA' => $phoneNumber,
             'PartyB' => 174379,
             'PhoneNumber' => $phoneNumber,
