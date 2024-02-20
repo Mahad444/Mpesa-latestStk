@@ -71,7 +71,7 @@ class MpesaController extends Controller
             // 'CallBackURL' => 'https://9002-102-212-30-22.ngrok-free.app/api/stk/push/callback/url',
             'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
             'AccountReference' => "SupaaDuka OnlineShopping",
-            'TransactionDesc' => "lipa Na M-PESA"
+            'TransactionDesc' => "lipa Na M-PESA online"
         ];
 
         $data_string = json_encode($curl_post_data);
