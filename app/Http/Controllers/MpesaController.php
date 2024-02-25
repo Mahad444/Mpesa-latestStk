@@ -90,7 +90,7 @@ class MpesaController extends Controller
 
     public function MpesaRes(Request $request)
      {
-        error_log("Mpesa method was called and it worked!");
+        error_log("Mpesa method was called ");
         $response = json_decode($request->getContent());
 
         $trn = new MpesaTransaction;
