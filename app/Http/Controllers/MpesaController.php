@@ -67,7 +67,7 @@ class MpesaController extends Controller
             'Amount' => $amount,
             'PartyA' => $phoneNumber,
             'PartyB' => 174379,
-            'PhoneNumber' => $phoneNumber,
+            'PhoneNumber' => $request->phone,
             'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
             'AccountReference' => "SupaaDuka OnlineShopping",
             'TransactionDesc' => "lipa Na M-PESA Online Shopp"
