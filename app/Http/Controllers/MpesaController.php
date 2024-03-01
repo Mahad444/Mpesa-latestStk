@@ -65,7 +65,7 @@ class MpesaController extends Controller
             'Timestamp' => Carbon::now()->format('YmdHis'),
             'TransactionType' => 'CustomerPayBillOnline',
             'Amount' => $amount,
-            'PartyA' => $phoneNumber,
+            'PartyA' => $request->phone,
             'PartyB' => 174379,
             'PhoneNumber' => $request->phone,
             'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
