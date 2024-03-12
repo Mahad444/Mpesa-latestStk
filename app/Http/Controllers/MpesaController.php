@@ -69,7 +69,7 @@ class MpesaController extends Controller
             'PartyB' => 174379,
             'PhoneNumber' => $request->phone,
             'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
-            'AccountReference' => "SupaaDuka OnlineShopping",
+            'AccountReference' => $this->order->id,
             'TransactionDesc' => "lipa Na M-PESA Online Shopp"
         ];
 
