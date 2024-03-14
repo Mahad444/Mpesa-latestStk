@@ -70,7 +70,7 @@ class MpesaController extends Controller
             'PhoneNumber' => $request->phone,
             'CallBackURL' => 'https://mpesatesting.free.nf/daraja/callback.php',
             'AccountReference' => $this->order->id,
-            'TransactionDesc' => "lipa Na M-PESA Online Shopp"
+            'TransactionDesc' => "Payment for SupaaDuka.com"
         ];
 
         $data_string = json_encode($curl_post_data);
