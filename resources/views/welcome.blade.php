@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Laravel M-PESA Integration
+                   Laravel M-PESA Integration Testing
                 </div>
 
                 <h1>C2B M-PESA INTEGRATION</h1>
