@@ -85,7 +85,7 @@
                    Laravel M-PESA Integration Testing
                 </div>
 
-                <h1>C2B M-PESA INTEGRATION</h1>
+                <h1>C2B M-PESA INTEGRATION SETUP</h1>
            
         
         
