@@ -28,7 +28,7 @@
                         <br>
 
                         <div class="d-flex mt-3 justify-content-between">
-                            <p>Please enter the transaction Id you received from M-PESA.</p>
+                            <p>Please enter the transaction number you received from M-PESA.</p>
                             <!-- INPUT  -->
                             <input type="text" name="Confirm" id="" class="form-control" placeholder="Enter Transaction ID" aria-describedby="helpId">
                         </div>
