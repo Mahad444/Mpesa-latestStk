@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+// routes for the payment process
 Route::get('/pay', function () {
     return view('pay');
 });
+// route to process the payment request to Safaricom
 Route::get('/confirm', function () {
     return view('confirm');
 });
