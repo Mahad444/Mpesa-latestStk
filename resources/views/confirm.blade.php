@@ -33,7 +33,7 @@
                             <input type="text" name="Confirm" id="" class="form-control" placeholder="Enter Transaction ID" aria-describedby="helpId">
                             if ($errors->has('transactionId'))
                             <span class="text-danger">{{ $errors->first('transactionId') }}</span>
-                            <input type="button" value="transaction">
+                            <button type="submit">confirmTansaction</button>
                         </div>
 
 
