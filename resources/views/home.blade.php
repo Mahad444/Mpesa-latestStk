@@ -17,7 +17,7 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <h3>Hp Laptop</h3>
-                                <p>40000/=</p>
+                                <p>40000 KES</p>
                                 <a class="btn btn-success" href="/pay">Pay Now</a>
                             </div>
                             <div class="col-lg-3">
