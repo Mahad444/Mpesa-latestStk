@@ -23,7 +23,7 @@
                             </div>
                             <div class="frm-grp">
                                 <label>@lang('Phone Number')</label>
-                                <input type="phone" name="phone"  placeholder="@lang('Enter phone number to pay with')">
+                                <input type="phone" name="phone"  placeholder="@lang('Enter phone number you wish to pay from')">
                             </div>
                         <input type="text" name="user" value="{{auth()->user()}}" hidden>
                         </div>
