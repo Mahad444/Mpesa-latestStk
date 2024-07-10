@@ -32,9 +32,11 @@
                             <button type="submit"  class="submit-btn">@lang('Pay Now')</button>
                         </div>
                         <br>
+                        <p>please check your phone for a popup message</p>
 
                         <div class="d-flex mt-3 justify-content-between">
-                            <p>You will receive a popup message on your phone once you click on pay now button. Enter your pin to complete transaction.</p>
+                            <p>You will receive a popup message on your phone once you click on pay now button. 
+                                Enter your pin to complete transaction.</p>
                         </div>
 
 
