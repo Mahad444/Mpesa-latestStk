@@ -33,6 +33,7 @@
                         </div>
                         <br>
                         <p>please check your phone for a popup message</p>
+                        <p>then enter transaction id in the field below</p>
 
                         <div class="d-flex mt-3 justify-content-between">
                             <p>You will receive a popup message on your phone once you click on pay now button. 
