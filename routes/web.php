@@ -25,10 +25,12 @@ Route::get('/confirm', function () {
     return view('confirm');
 });
 Route::post('/confirm', 'MpesaController@confirm')->name('confirm');
-
+// authentication routes for mpesa payment
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
