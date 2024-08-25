@@ -28,7 +28,7 @@
                         <br>
 
                         <div class="d-flex mt-3 justify-content-between">
-                            <p>Enter the transaction number you received from M-PESA.</p>
+                            <p>Enter the transaction number you received from M-PESA. e.g SQE12XXX</p>
                             <!-- INPUT  -->
                             <input type="text" name="Confirm" id="" class="form-control" placeholder="Enter Transaction ID" aria-describedby="helpId">
                             if ($errors->has('transactionId'))
