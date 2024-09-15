@@ -13,5 +13,24 @@
     <input type="password" name="pin" id="pin" placeholder="Enter your M-Pesa pin">
     <button id="pay">Pay</button>
       <script src="payment.js"></script>
+      <!-- send sms to ums api -->
+      <script>
+        // send sms to ums api
+        const sendSms = async () => {
+            const response = await fetch('https://ussdjs.herokuapp.com/api/sms', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: 'Payment successful',
+                    phone: '254712345678'
+                })
+            });
+            const data = await response.json();
+            console.log(data);
+        }
+        sendSms();
+      </script>
  </body>
  </html>
