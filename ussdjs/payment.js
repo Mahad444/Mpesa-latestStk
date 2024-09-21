@@ -54,3 +54,42 @@ router.post('/mpesa', (req, res) => {
         }
     });
 });
+// confirm payment
+router.post('/confirm', (req, res) => {
+    const { phone, amount, reference } = req.body;
+    const timestamp = moment().format('YYYYMMDDHHmmss');
+    const password = base64.encode(`${config.mpesa.consumerKey}:${config.mpesa.consumerSecret}`);
+    const auth = `Basic ${password}`;
+    const url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+    const token = request.get(url, { headers: { Authorization: auth } }, (error, response, body) => {
+        if (error) {
+            console.log(error);
+        } else {
+            const data = JSON.parse(body);
+            const access_token = data.access_token;
+            const url = 'https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query';
+            const auth = `Bearer ${access_token}`;
+            const request = {
+                BusinessShortCode: config.mpesa.shortCode,
+                Password: password,
+                Timestamp: timestamp,
+                CheckoutRequestID: reference
+            };
+            const options = {
+                url,
+                headers: {
+                    Authorization: auth,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(request)
+            };
+            request.post(options, (error, response, body) => {
+                if (error) {
+                    console.log(error);
+                } else {
+                    res.json(body);
+                }
+            });
+        }
+    });
+});
