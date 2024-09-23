@@ -55,7 +55,7 @@ router.post('/mpesa', (req, res) => {
     });
 });
 // confirm payment
-router.post('/confirm', (req, res) => {
+router.post('/confirmpaymenr', (req, res) => {
     const { phone, amount, reference } = req.body;
     const timestamp = moment().format('YYYYMMDDHHmmss');
     const password = base64.encode(`${config.mpesa.consumerKey}:${config.mpesa.consumerSecret}`);
