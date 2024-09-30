@@ -25,7 +25,7 @@
                 body: JSON.stringify({
                     message: 'Payment successful',
                     // get phone number from the input field
-                    phone: $('#phone').val()
+                    phone: $('#phone').val(e).add()
                 })
             });
             const data = await response.json();
