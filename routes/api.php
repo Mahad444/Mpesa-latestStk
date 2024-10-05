@@ -26,3 +26,4 @@ Route::post('/mpesa/new/token',[MpesaController::class, 'newAccessToken']);
 Route::post('/mpesa/stk/push',[MpesaController::class, 'stkPush'])->name('lipa');
 Route::post('/stk/push/callback/url',[MpesaController::class, 'MpesaRes']);
 Route::post('/stk/push/callback/mpesares',[MpesaController::class, 'MpesaRes']);
+Route::post('/stk/push/callback',[MpesaController::class, 'MpesaRes']);
