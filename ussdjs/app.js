@@ -2201,6 +2201,6 @@ function levelOneDailyBundlesNEWquery() {
 //                   }
 //                   break;
 
-// if mpesa is selected call for the stk push 
+//  if mpesa is selected call for stk push
 
 
