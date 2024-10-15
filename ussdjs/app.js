@@ -2202,5 +2202,6 @@ function levelOneDailyBundlesNEWquery() {
 //                   break;
 
 //  if mpesa is selected call for stk push
+//  if airtime is selected call for airtime purchase
 
 
