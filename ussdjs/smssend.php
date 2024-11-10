@@ -29,3 +29,7 @@ if ($response === false) {
     echo $response;
 }
 curl_close($curl);
+
+// succes message
+echo "SMS sent successfully";
+?>
