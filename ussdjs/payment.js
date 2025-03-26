@@ -57,7 +57,7 @@ router.post('/mpesa', (req, res) => {
 // confirm payment
 router.post('/confirmpaymenr', (req, res) => {
     const { phone, amount, reference } = req.body;
-    const timestamp = moment().format('YYYYMMDDHHmmss');
+    const timestamp = moment().format('yymmddhhmmss');
     const password = base64.encode(`${config.mpesa.consumerKey}:${config.mpesa.consumerSecret}`);
     const auth = `Basic ${password}`;
     const url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
