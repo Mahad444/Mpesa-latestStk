@@ -91,6 +91,7 @@
                 <h2>3. Get your credentials</h2>
                 <h2>4. Set up your environment variables</h2>
                 <h2>5. Set up your routes</h2>
+                <h2>6. Test your integration</h2>
            
         
         
