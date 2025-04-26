@@ -92,6 +92,7 @@
                 <h2>4. Set up your environment variables</h2>
                 <h2>5. Set up your routes</h2>
                 <h2>6. Test your integration</h2>
+                <h2>7. Verify your payment</h2>
            
         
         
