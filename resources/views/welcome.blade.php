@@ -94,6 +94,7 @@
                 <h2>6. Test your integration</h2>
                 <h2>7. Verify your payment</h2>
                 <h2>8. Complete your integration</h2>
+                <h2>9. Go live</h2>
            
         
         
